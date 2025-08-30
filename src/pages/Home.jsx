@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../components/Hero/Hero";
 import RightArrow from "../components/RightArrow/RightArrow";
 import UnderlineLink from "../components/Underline/Underline";
-import card1 from "../assets/card.png";
+import card1 from "../assets/Card.png";
 import card2 from "../assets/card1.png";
 import card3 from "../assets/card2.png";
 
