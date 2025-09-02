@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/Logo.svg";
 import { Link } from "react-router-dom";
-import { NAVBAR_MENU } from "../../static/index";
+import { NAVBAR_MENU } from "../../static/index.jsx";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
 

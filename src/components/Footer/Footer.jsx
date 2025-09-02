@@ -1,6 +1,6 @@
 import { memo } from "react";
 import logo from "../../assets/Logo.svg";
-import { FOOTER_ICONS } from "../../static";
+import { FOOTER_ICONS } from "../../static/index.jsx";
 
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="bg-[#FCD980] p-4 text-black grid grid-cols-2 gap-2">
+          <div className="mt-[85px] bg-[#FCD980] p-4 text-black grid grid-cols-2 gap-2">
             <p className="font-semibold">Email me at</p>
             <p className="font-semibold">Call us</p>
             <p>contact@website.com</p>
@@ -31,10 +31,10 @@ const Footer = () => {
             We are always open to discuss your project, improve your online
             presence and help with your UX/UI design challenges.
           </p>
-          <div className="flex gap-[26px] mt-[26px]">
+          <div v className="flex gap-[26px] mt-[26px] text-white">
             {FOOTER_ICONS.map(({ icon, url }, inx) => (
               <a key={inx} href={url} target="_blank" rel="noopener noreferrer">
-                <img src={icon} />
+                {icon}
               </a>
             ))}
           </div>

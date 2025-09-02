@@ -5,6 +5,9 @@ import UnderlineLink from "../components/Underline/Underline";
 import card1 from "../assets/Card.png";
 import card2 from "../assets/card1.png";
 import card3 from "../assets/card2.png";
+import MainCard from "../components/MainCard/MainCard";
+import { CARD_DATA } from "../static/index.jsx";
+import profile_photo from "../assets/woman-in-collared-shirt-774909.svg";
 
 const pic1 = {
   title: "Workhub office Webflow Webflow Design",
@@ -19,11 +22,11 @@ const pic2 = {
 
 const Home = () => {
   return (
-    <main>
+    <div>
       <Hero />
 
-      <div className="w-full py-[60px] flex flex-col gap-[30px]">
-        <div className="mx-auto w-[1248px] flex justify-between items-center">
+      <section className="w-full py-[60px] flex flex-col gap-[30px]">
+        <div className="container flex justify-between items-center">
           <h1 className="text-[48px] font-semibold leading-[64px]">
             View our projects
           </h1>
@@ -79,8 +82,62 @@ const Home = () => {
             />
           </div>
         </div>
-      </div>
-    </main>
+      </section>
+      <section className="bg-[rgba(244,246,252,1)] py-[128px]">
+        <div className="container">
+          <p className="text-center text-[rgba(40,41,56,1)] font-poppins text-base font-medium leading-7">
+            Features
+          </p>
+          <h1 className="text-center max-w-[630px] text-[rgba(40,41,56,1)] text-[48px] font-semibold leading-[64px] mx-auto ">
+            Design that solves problems, one product at a time
+          </h1>
+          <div className="grid grid-cols-3 gap-[32px] mt-[45px] ">
+            {CARD_DATA?.map((data, idx) => (
+              <divCard
+                key={idx}
+                title={data.title}
+                description={data.description}
+                icon={data.icon}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-[130px]">
+        <div className="flex container gap-[110px]">
+          <div className="flex-1 max-w-[327px]">
+            <h1 className="text-[rgba(40,41,56,1)] font-poppins text-[38px] font-semibold leading-[56px]">
+              What our clients say about us
+            </h1>
+            <p className="text-[#282938] text-base font-normal leading-7 mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.
+            </p>
+          </div>
+
+          <div className="flex-1 flex flex-col gap-12">
+            <h1 className="font-medium text-[32px] leading-[48px]">
+              "The best agency we’ve worked with so far. They understand our
+              product and are able to add new features with a great focus."
+            </h1>
+            <div className="flex gap-4">
+              <img
+                className="rounded-full h-[58px] w-[58px] object-cover"
+                src={profile_photo}
+                alt="Profile"
+              />
+              <div>
+                <p className="font-normal text-lg leading-8 tracking-normal">
+                  Jenny Wilson
+                </p>
+                <span className="font-normal text-[12px] leading-[28px]">
+                  Vice President
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
