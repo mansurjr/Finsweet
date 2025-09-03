@@ -51,8 +51,8 @@ const Home = () => {
               <p className="mt-2 text-sm opacity-80 max-w-[293px]">
                 {pic1.body}
               </p>
-              <div className="flex gap-5 items-center content-center">
-                <UnderlineLink className="mt-4">{pic1.footer}</UnderlineLink>
+              <div className="flex items-center gap-3 mt-3">
+                <UnderlineLink className="">{pic1.footer}</UnderlineLink>
                 <RightArrow />
               </div>
             </div>
@@ -68,7 +68,7 @@ const Home = () => {
               <div className="absolute inset-0 bg-[linear-gradient(-53.8deg,rgba(28,30,83,1),rgba(28,30,83,0.42)_100%)] z-10" />
               <div className="absolute bottom-6 left-6 z-20 text-white">
                 <h2 className="text-lg font-semibold">{pic2.title}</h2>
-                <div className="flex items-center gap-3 mt-2">
+                <div className="flex items-center gap-3 mt-2 ">
                   <UnderlineLink>{pic2.footer}</UnderlineLink>
                   <RightArrow />
                 </div>
