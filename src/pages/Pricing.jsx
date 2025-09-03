@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { faq, pricing } from "../static/index.jsx";
 
 const Pricing = () => {
+    const [openId, setOpenId] = useState(null);
+
+    const toggleFaq = (id) => {
+      setOpenId(openId === id ? null : id);
+    };
+
   return (
     <div>
       <section className="py-32">
@@ -116,20 +122,35 @@ const Pricing = () => {
                 Contact us For More Info
               </p>
             </div>
+
             <div className="w-[60%]">
               {faq?.map((item) => (
                 <div
-                  className="border-b-1 border-solid border-[#C6C2EA] flex items-center py-8 px-6"
+                  className="border-b border-solid border-[#C6C2EA] py-8 flex flex-col "
                   key={item.id}>
-                  <h6 className="text-[#2405F2] text-[24px] font-normal">
-                    {item.number}
-                  </h6>
-                  <div className="flex justify-between w-full ml-14 cursor-pointer select-none">
-                    <h6 className="font-normal text-[24px] text-[#282938]">
+                  <div
+                    className="flex items-center justify-between cursor-pointer select-none"
+                    onClick={() => toggleFaq(item.id)}>
+                    <h6 className="text-[#2405F2] text-[24px] font-normal">
+                      {item.number}
+                    </h6>
+                    <h6 className="ml-14 flex-1 font-normal text-[24px] text-[#282938]">
                       {item.title}
                     </h6>
-                    <img src={item.img} alt="" />
+                    <img
+                      src={item.img}
+                      alt="toggle"
+                      className={`transform transition-transform duration-300 ${
+                        openId === item.id ? "rotate-45" : ""
+                      }`}
+                    />
                   </div>
+
+                  {openId === item.id && (
+                    <p className="mt-4 ml-19 text-gray-600 text-[18px] max-w-156 ">
+                      {item.body}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>

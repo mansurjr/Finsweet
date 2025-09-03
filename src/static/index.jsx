@@ -164,17 +164,20 @@ export const faq = [
     id: 1,
     number: "01",
     title: "How much time does it take ?",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     img: plus,
   },
   {
     id: 2,
     number: "02",
     title: "What is your class naming convention ?",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     img: plus,
   },
   {
     id: 3,
     number: "03",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     title: "How do we communicate ?",
     img: plus,
   },
@@ -182,6 +185,7 @@ export const faq = [
     id: 4,
     number: "04",
     title: "I have a bigger project. Can you handle it ?",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     img: plus,
   },
 
@@ -189,6 +193,7 @@ export const faq = [
     id: 5,
     number: "05",
     title: "What is your class naming convention ?",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     img: plus,
   },
 ];
